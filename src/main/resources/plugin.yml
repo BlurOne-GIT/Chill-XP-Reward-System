@@ -1,0 +1,8 @@
+name: Chill-XP-Reward-System
+version: '${project.version}'
+main: code.blurone.chillxprewardsystem.ChillXP
+api-version: '1.20'
+load: STARTUP
+authors: [BlurOne!]
+description: A configurable Skelun's XP Reward System port.
+website: https://github.com/BlurOne-GIT/Chill-XP-Reward-System
