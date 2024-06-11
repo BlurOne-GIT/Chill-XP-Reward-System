@@ -6,7 +6,7 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.block.BlockBreakEvent
 
 open class GenericBreakingTracker(
-    private val blocks: MutableSet<Material>,
+    private val blocks: Set<Material>,
     delta: Int,
     trackingKey: NamespacedKey
 ) : Tracker(delta, trackingKey) {

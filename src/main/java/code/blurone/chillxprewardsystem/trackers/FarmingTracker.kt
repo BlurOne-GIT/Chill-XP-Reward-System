@@ -6,7 +6,7 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.player.PlayerHarvestBlockEvent
 
 class FarmingTracker(
-    blocks: List<Material>,
+    blocks: Set<Material>,
     delta: Int,
     trackingKey: NamespacedKey
 ) : GenericBreakingTracker(blocks, delta, trackingKey) {
