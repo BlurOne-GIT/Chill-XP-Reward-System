@@ -3,6 +3,7 @@ package code.blurone.chillxprewardsystem.trackers
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
 import org.bukkit.event.EventHandler
+import org.bukkit.event.EventPriority
 import org.bukkit.event.player.PlayerHarvestBlockEvent
 
 class FarmingTracker(
@@ -10,6 +11,6 @@ class FarmingTracker(
     delta: Int,
     trackingKey: NamespacedKey
 ) : GenericBreakingTracker(blocks, delta, trackingKey) {
-    @EventHandler
+    @EventHandler(priority = EventPriority.MONITOR)
     private fun onHarvest(event: PlayerHarvestBlockEvent) = accumulateForPlayer(event.player)
 }
