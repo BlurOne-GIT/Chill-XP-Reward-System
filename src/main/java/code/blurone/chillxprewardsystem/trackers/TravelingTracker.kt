@@ -1,4 +1,4 @@
-package code.blurone.chillxprewardsystem.Trackers
+package code.blurone.chillxprewardsystem.trackers
 
 import org.bukkit.NamespacedKey
 import org.bukkit.event.EventHandler
