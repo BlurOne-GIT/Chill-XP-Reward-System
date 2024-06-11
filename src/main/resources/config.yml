@@ -1,0 +1,12 @@
+# Choose between different methods of giving the player xp
+# 'VANILLA' gives the player the earned xp instantaneously
+# 'SLEEPING' only gives the player the accumulated xp while it's sleeping
+xp-mode: 'VANILLA'
+
+# Setting any delta to 0 or below will disable it
+cutting-delta: 15
+digging-delta: 64
+farming-delta: 24
+mining-delta: 34
+traveling-delta: 85
+building-delta: 0
