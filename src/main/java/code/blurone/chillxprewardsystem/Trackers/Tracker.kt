@@ -1,5 +1,6 @@
-package code.blurone.chillxprewardsystem
+package code.blurone.chillxprewardsystem.Trackers
 
+import code.blurone.chillxprewardsystem.XpGranter
 import org.bukkit.NamespacedKey
 import org.bukkit.entity.Player
 import org.bukkit.event.Listener
