@@ -6,7 +6,7 @@
 
   <groupId>code.blurone</groupId>
   <artifactId>Chill-XP-Reward-System</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>jar</packaging>
 
   <name>Chill-XP-Reward-System</name>
