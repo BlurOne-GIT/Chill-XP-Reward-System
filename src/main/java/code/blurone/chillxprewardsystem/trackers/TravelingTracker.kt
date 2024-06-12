@@ -7,8 +7,13 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.EventPriority
 import org.bukkit.event.player.PlayerMoveEvent
 
-class TravelingTracker(instantXp: Boolean, xpFunction: String?, xpArg: Double, delta: Int, trackingKey: NamespacedKey) :
-    Tracker(instantXp, xpFunction, xpArg, delta, trackingKey) {
+class TravelingTracker(
+    instantXp: Boolean,
+    xpFunction: String?,
+    xpArg: Double,
+    delta: Int,
+    trackingKey: NamespacedKey
+) : Tracker(instantXp, xpFunction, xpArg, delta, trackingKey) {
     @EventHandler(priority = EventPriority.LOWEST)
     private fun onPlayerTravel(event: PlayerMoveEvent) {
         val toVector = event.to?.toVector()?.setY(0) ?: return

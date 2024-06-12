@@ -2,7 +2,6 @@ package code.blurone.chillxprewardsystem
 
 import code.blurone.chillxprewardsystem.trackers.FarmingTracker
 import code.blurone.chillxprewardsystem.trackers.GenericBreakingTracker
-import code.blurone.chillxprewardsystem.trackers.Tracker
 import code.blurone.chillxprewardsystem.trackers.TravelingTracker
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
