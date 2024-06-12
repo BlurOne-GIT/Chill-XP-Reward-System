@@ -8,12 +8,25 @@ import org.bukkit.event.block.BlockBreakEvent
 
 open class GenericBreakingTracker(
     private val blocks: Set<Material>,
+    instantXp: Boolean,
+    xpFunction: String?,
+    xpArg: Double,
     delta: Int,
     trackingKey: NamespacedKey
-) : Tracker(delta, trackingKey) {
-    @EventHandler(priority = EventPriority.MONITOR)
+) : Tracker(instantXp, xpFunction, xpArg, delta, trackingKey) {
+    @EventHandler(priority = EventPriority.LOWEST)
     private fun onBlockBreak(event: BlockBreakEvent) {
-        if (blocks.contains(event.block.type) && event.block.blockData.isPreferredTool(event.player.inventory.itemInMainHand))
-            accumulateForPlayer(event.player)
+        if (
+            !blocks.contains(event.block.type) ||
+            !event.block.blockData.isPreferredTool(event.player.inventory.itemInMainHand) ||
+            !accumulateForPlayer(event.player)
+        ) return
+
+        val toAward = xpFunction(event.player.level)
+
+        if (instantXp)
+            return event.player.giveExp(toAward)
+
+        event.expToDrop = toAward
     }
 }
