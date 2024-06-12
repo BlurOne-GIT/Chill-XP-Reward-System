@@ -1,7 +1,13 @@
-# Choose between different methods of giving the player xp
-# 'VANILLA' gives the player the earned xp instantaneously
-# 'SLEEPING' only gives the player the accumulated xp while it's sleeping
-xp-mode: 'VANILLA'
+# Instantaneously award the player the xp instead of creating an xp orb
+instant-xp: false
+
+# Choose between different functions for calculating the earned xp
+# 'SKELUN' give the player 12 points for levels 0-9, 15 for 10-19, 21 for 20-29 and 33 for 30+ (xp-arg does nothing)
+# 'CONSTANT' gives the player the amount of points denoted by xp-arg
+# 'PROPORTIONAL' gives the player the percentage denoted by xp-arg of the amount needed to complete that level
+# 'LEVELED' gives the player their level multiplied by xp-arg
+xp-function: 'SKELUN'
+xp-arg: 15
 
 # Setting any delta to 0 or below will disable it
 cutting-delta: 15
